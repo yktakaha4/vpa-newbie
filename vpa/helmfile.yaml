@@ -16,12 +16,13 @@ releases:
     version: "{{ .Values.Newbie.VPA.ChartVersion }}"
     # ref: https://github.com/FairwindsOps/charts/tree/master/stable/vpa
     values:
+      # goldilocksはrecommenderのみ利用するため、updaterとadmissionControllerは無効化する
+      # ref: https://github.com/FairwindsOps/goldilocks/blob/master/docs/installation.md#important-note-about-vpa
       - recommender:
+          enabled: true
           image:
-            tag: "{{ .Values.Newbie.VPA.ImageTag }}"
+            tag: "{{ .Values.Newbie.VPA.Recommender.ImageTag }}"
       - updater:
-          image:
-              tag: "{{ .Values.Newbie.VPA.ImageTag }}"
+          enabled: false
       - admissionController:
-          image:
-              tag: "{{ .Values.Newbie.VPA.ImageTag }}"
+          enabled: false

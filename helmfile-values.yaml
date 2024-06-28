@@ -5,4 +5,5 @@ Newbie:
   VPA:
     # https://artifacthub.io/packages/helm/fairwinds-stable/vpa
     ChartVersion: 4.5.0
-    ImageTag: 1.1.2
+    Recommender:
+      ImageTag: 1.1.2
