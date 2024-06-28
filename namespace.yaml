@@ -4,3 +4,4 @@ metadata:
   name: newbie
   labels:
     name: newbie
+    goldilocks.fairwinds.com/enabled: "true"
