@@ -1,0 +1,25 @@
+environments:
+  default:
+    values:
+    - ../helmfile-values.yaml
+
+---
+
+repositories:
+  - name: bitnami-full-index
+    url: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+
+releases:
+  - name: metrics-server
+    namespace: kube-system
+    chart: bitnami-full-index/metrics-server
+    version: "{{ .Values.Newbie.MetricsServer.ChartVersion }}"
+    values:
+      - rbac:
+          create: true
+      - serviceAccount:
+          create: true
+      - extraArgs:
+        - --kubelet-insecure-tls=true
+      - apiService:
+          create: true
