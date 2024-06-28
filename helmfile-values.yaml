@@ -7,3 +7,6 @@ Newbie:
     ChartVersion: 4.5.0
     Recommender:
       ImageTag: 1.1.2
+  Goldilocks:
+    # https://artifacthub.io/packages/helm/fairwinds-stable/goldilocks
+    ChartVersion: 8.0.2

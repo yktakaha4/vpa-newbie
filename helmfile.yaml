@@ -1,3 +1,4 @@
 helmfiles:
   - metrics-server/helmfile.yaml
   - vpa/helmfile.yaml
+  - goldilocks/helmfile.yaml

@@ -18,6 +18,7 @@ releases:
     values:
       # goldilocksはrecommenderのみ利用するため、updaterとadmissionControllerは無効化する
       # ref: https://github.com/FairwindsOps/goldilocks/blob/master/docs/installation.md#important-note-about-vpa
+      # ref: https://github.com/FairwindsOps/charts/tree/master/stable/goldilocks#vpa-subchart
       - recommender:
           enabled: true
           image:
