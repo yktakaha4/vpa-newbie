@@ -5,3 +5,11 @@ metadata:
   labels:
     name: newbie
     goldilocks.fairwinds.com/enabled: "true"
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: hamster
+  labels:
+    name: hamster
+    goldilocks.fairwinds.com/enabled: "true"

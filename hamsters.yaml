@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: hamster
-  namespace: newbie
+  namespace: hamster
 spec:
   selector:
     matchLabels:
@@ -32,7 +32,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: redis-master
-  namespace: newbie
+  namespace: hamster
   labels:
     app: redis
 spec:
